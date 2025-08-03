@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120, 60%, 98%;
+    --foreground: 222.2, 84%, 4.9%;
+
+    --card: 0, 0%, 100%;
+    --card-foreground: 222.2, 84%, 4.9%;
+
+    --popover: 0, 0%, 100%;
+    --popover-foreground: 222.2, 84%, 4.9%;
+
+    --primary: 142, 76%, 36%;
+    --primary-foreground: 355.7, 100%, 97.3%;
+
+    --secondary: 120, 7%, 95%;
+    --secondary-foreground: 222.2, 47.4%, 11.2%;
+
+    --muted: 210, 40%, 96.1%;
+    --muted-foreground: 215.4, 16.3%, 46.9%;
+
+    --accent: 160, 84%, 39%;
+    --accent-foreground: 222.2, 47.4%, 11.2%;
+
+    --destructive: 0, 84.2%, 60.2%;
+    --destructive-foreground: 210, 40%, 98%;
+
+    --border: 214.3, 31.8%, 91.4%;
+    --input: 214.3, 31.8%, 91.4%;
+    --ring: 142, 76%, 36%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    @apply bg-gradient-to-br from-nutritrack-100 via-nutritrack-50 to-white;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-md transition-colors;
+  }
+
+  .input-field {
+    @apply border border-input bg-background px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  }
+
+  .page-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6;
+  }
+
+  .page-subtitle {
+    @apply text-xl text-muted-foreground mb-8 max-w-2xl;
+  }
+}
